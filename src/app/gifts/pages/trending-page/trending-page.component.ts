@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { GifListComponent } from '../../components/gif-list/gif-list.component';
+import { GifsService } from '../../services/gifs.service';
 
 @Component({
   selector: 'app-trending-page',
@@ -11,7 +12,7 @@ import { GifListComponent } from '../../components/gif-list/gif-list.component';
 
 export default class TrendingPageComponent {
 
-  imageUrls:string[]= [
+/*   imageUrls:string[]= [
     "https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg",
     "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
     "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
@@ -24,6 +25,9 @@ export default class TrendingPageComponent {
     "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg",
     "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg",
     "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg"
-  ];
+  ]; */
+
+  // inyectar nuestro servicio(la clase)
+  gifService = inject(GifsService)
 
  }

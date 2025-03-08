@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
+import { Gif } from '../../../interfaces/gif.interface';
 
 @Component({
   selector: 'gif-list-item',
