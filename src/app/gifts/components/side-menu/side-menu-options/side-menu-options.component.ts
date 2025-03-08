@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { GifsService } from '../../../services/gifs.service';
 // vamos a crear una interface
 interface MenuOption {
   label: string,
@@ -15,6 +16,10 @@ interface MenuOption {
 })
 export class SideMenuOptionsComponent {
 
+/*   searhHistoryKeys
+ */
+
+gitService = inject(GifsService);
 
   menuOption: MenuOption[] = [
     {
@@ -30,5 +35,6 @@ export class SideMenuOptionsComponent {
       route:'/dashboard/search'
     },
   ];
+
 
 }
